@@ -11,21 +11,19 @@ public class Ex94 {
 
         System.out.println("n-размерность матрицы");
         //int n = new Scanner(System.in).nextInt();
-        int n = 5;
-        int l = 3;
-        // int[][] initial = new int[n][n];
-        int[][] a = new int[n][n];
+        int sizeOfArray = 5;
+        int[][] array = new int[sizeOfArray][sizeOfArray];
 
          /*9.Ввести с консоли n-размерность матрицы a [n] [n]. Задать значения элемен-
     тов матрицы в интервале значений от -n до n с помощью датчика случайных чи-
     сел.*/
 
         System.out.println("Матрица: ");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                int v = ((int) (Math.random() * (n + n)) - n);
-                a[i][j] = v;
-                System.out.print(a[i][j] + " ");
+        for (int i = 0; i < sizeOfArray; i++) {
+            for (int j = 0; j < sizeOfArray; j++) {
+                int randomGeneratedNumber = ((int) (Math.random() * (sizeOfArray + sizeOfArray)) - sizeOfArray);
+                array[i][j] = randomGeneratedNumber;
+                System.out.print(array[i][j] + " ");
             }
             System.out.println("");
         }
@@ -33,14 +31,14 @@ public class Ex94 {
 //9.4. Найти сумму элементов матрицы, расположенных между первым и вторым положительными элементами каждой строки.
 
         System.out.println("сумма элементов матрицы, расположенных между первым и вторым положительными элементами каждой строки: ");
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < sizeOfArray; i++) {
             boolean isCountON = false;
             int sum = 0;
-            for (int j = 0; j < n; j++) {
-                if (isCountON && a[i][j] <= 0) {
-                    sum += a[i][j];
+            for (int j = 0; j < sizeOfArray; j++) {
+                if (isCountON && array[i][j] <= 0) {
+                    sum += array[i][j];
                 }
-                else if (a[i][j] > 0) {
+                else if (array[i][j] > 0) {
                     if (isCountON)
                     {
                         break;

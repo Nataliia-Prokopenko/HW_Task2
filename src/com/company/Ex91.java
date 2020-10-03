@@ -10,22 +10,19 @@ public class Ex91 {
     public static void main(String[] args) {
 
         System.out.println("n-размерность матрицы");
-        //int n = new Scanner(System.in).nextInt();
-        int n = 5;
-        int l = 3;
-       // int[][] initial = new int[n][n];
-        int[][] a = new int[n][n];
+        int sizeOfArray = 5;
+        int[][] array = new int[sizeOfArray][sizeOfArray];
 
          /*9.Ввести с консоли n-размерность матрицы a [n] [n]. Задать значения элемен-
     тов матрицы в интервале значений от -n до n с помощью датчика случайных чи-
     сел.*/
 
         System.out.println("Матрица: ");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                int v = ((int) (Math.random() * (n + n)) - n);
-                a[i][j] = v;
-                System.out.print(a[i][j] + " ");
+        for (int i = 0; i < sizeOfArray; i++) {
+            for (int j = 0; j < sizeOfArray; j++) {
+                int randomGeneratedNumber = ((int) (Math.random() * (sizeOfArray + sizeOfArray)) - sizeOfArray);
+                array[i][j] = randomGeneratedNumber;
+                System.out.print(array[i][j] + " ");
             }
             System.out.println("");
         }
@@ -33,16 +30,16 @@ public class Ex91 {
 //9.1. Упорядочить строки (столбцы) матрицы в порядке возрастания значений.
         System.out.println("Упорядоченые строки: ");
        // a = initial;
-        for (int i = 0; i < n; i++) {
-            for (int j = n - 1; j >= 0; j--) {
+        for (int i = 0; i < sizeOfArray; i++) {
+            for (int j = sizeOfArray - 1; j >= 0; j--) {
                 for (int k = 0; k < j; k++) {
-                    if (a[i][j] >= a[i][k]) {
-                        int temp = a[i][k];
-                        a[i][k] = a[i][j];
-                        a[i][j] = temp;
+                    if (array[i][j] >= array[i][k]) {
+                        int temp = array[i][k];
+                        array[i][k] = array[i][j];
+                        array[i][j] = temp;
                     }
                 }
-                System.out.print(a[i][j] + " ");
+                System.out.print(array[i][j] + " ");
             }
             System.out.println("");
         }
