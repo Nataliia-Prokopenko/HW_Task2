@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Ex3 {
 
     //3. Вывести на консоль те числа, длина которых меньше (больше) средней, а также длину.
-    //1 22 1 333 1 4444 22 55555
 
     public static void main(String[] args) {
 

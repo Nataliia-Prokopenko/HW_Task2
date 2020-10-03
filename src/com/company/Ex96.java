@@ -2,8 +2,6 @@ package com.company;
 
 public class Ex96 {
 
-   // private static int sizeOfArray;
-
     public static void main(String[] args) {
 
         System.out.println("n-размерность матрицы");
@@ -20,10 +18,8 @@ public class Ex96 {
         for (int i = 0; i < sizeOfArray; i++) {
             for (int j = 0; j < sizeOfArray; j++) {
                 int randomGeneratedNumber = ((int) (Math.random() * (sizeOfArray + sizeOfArray)) - sizeOfArray);
-
                 arrayInitial[i][j] = randomGeneratedNumber;
                 arrayConverted[i][j] = randomGeneratedNumber;
-
                 System.out.print(arrayInitial[i][j] + " ");
             }
             System.out.println("");

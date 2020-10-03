@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class Ex8 {
     public static void main(String[] args) {
         //8. Вывести числа от 1 до k в виде матрицы N x N слева направо и сверху вниз.

@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Ex1 {
 
 // 1. Найти самое короткое и самое длинное число. Вывести найденные числа и их длину.
-    //1 22 1 333 1 4444 22 55555
 
     public static void main(String[] args) {
         System.out.println("Please enter n numbers using space: ");

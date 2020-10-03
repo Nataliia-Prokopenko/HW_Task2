@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Ex2 {
 
     //2. Упорядочить и вывести числа в порядке возрастания (убывания) значений их длины.
-    //1 22 1 333 1 4444 22 55555
 
     public static void main(String[] args) {
         System.out.println("Please enter n numbers using space: ");

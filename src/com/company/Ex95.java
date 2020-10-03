@@ -1,10 +1,5 @@
 package com.company;
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Ex95 {
 
     public static void main(String[] args) {
@@ -25,19 +20,16 @@ public class Ex95 {
         for (int i = 0; i < sizeOfArray; i++) {
             for (int j = 0; j < sizeOfArray; j++) {
                 int randomGeneratedNumber = ((int) (Math.random() * (sizeOfArray + sizeOfArray)) - sizeOfArray);
-
                 arrayInitial[i][j] = randomGeneratedNumber;
                 arrayTurnTo90[i][j] = randomGeneratedNumber;
                 arrayTurnTo180[i][j] = randomGeneratedNumber;
                 arrayTurnTo270[i][j] = randomGeneratedNumber;
-
                 System.out.print(arrayInitial[i][j] + " ");
             }
             System.out.println("");
         }
 
 //9.5. Повернуть матрицу на 90 (180, 270) градусов против часовой стрелки.
-
 
         System.out.println("Матрицу на 90 градусов против часовой стрелки: ");
         for (int i = 0; i < sizeOfArray; i++) {
@@ -47,7 +39,6 @@ public class Ex95 {
             }
             System.out.println("");
         }
-
         System.out.println("Матрицу на 180 градусов против часовой стрелки: ");
         for (int i = 0; i < sizeOfArray; i++) {
             for (int j = 0; j < sizeOfArray; j++) {
@@ -56,7 +47,6 @@ public class Ex95 {
             }
             System.out.println("");
         }
-
         System.out.println("Матрицу на 270 градусов против часовой стрелки: ");
         for (int i = 0; i < sizeOfArray; i++) {
             for (int j = 0; j < sizeOfArray; j++) {
@@ -65,7 +55,6 @@ public class Ex95 {
             }
             System.out.println("");
         }
-
     }
 }
 

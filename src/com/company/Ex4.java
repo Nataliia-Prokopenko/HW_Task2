@@ -6,7 +6,6 @@ public class Ex4 {
     public static void main(String[] args) {
 
         //4. Найти число, в котором число различных цифр минимально. Если таких чисел несколько, найти первое из них.
-        //1 22 1 333 1 4444 22 55555
 
         System.out.println("Please enter n numbers using space: ");
         String numberInput = new Scanner(System.in).nextLine();
@@ -22,7 +21,7 @@ public class Ex4 {
                 index = i;
             }
         }
-        System.out.println("Число, в котором число различных цифр минимально" + numbers[index]);
+        System.out.println("Число, в котором число различных цифр минимально: " + numbers[index]);
     }
 
     private static int getUniqueDigitCount(String[] digits) {

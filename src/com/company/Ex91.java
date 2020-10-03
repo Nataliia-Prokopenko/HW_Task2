@@ -1,10 +1,5 @@
 package com.company;
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Ex91 {
 
     public static void main(String[] args) {
@@ -43,7 +38,6 @@ public class Ex91 {
             }
             System.out.println("");
         }
-
     }
 }
 

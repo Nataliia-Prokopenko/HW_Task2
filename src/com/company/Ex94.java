@@ -1,10 +1,5 @@
 package com.company;
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Ex94 {
 
     public static void main(String[] args) {
