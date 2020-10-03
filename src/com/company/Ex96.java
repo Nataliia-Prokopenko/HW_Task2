@@ -34,7 +34,7 @@ public class Ex96 {
                 arrayConverted[i][j] = arrayInitial[i][j] - average;
                 System.out.print(arrayConverted[i][j] + " ");
             }
-            System.out.print("Avr" + average);
+            System.out.print("Avr: " + average);
             System.out.println("");
         }
     }
