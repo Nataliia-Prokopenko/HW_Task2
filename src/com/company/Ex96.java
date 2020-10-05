@@ -5,7 +5,7 @@ public class Ex96 {
     public static void main(String[] args) {
 
         System.out.println("n-размерность матрицы");
-        //int n = new Scanner(System.in).nextInt();
+        //int sizeOfArray = new Scanner(System.in).nextInt();
         int sizeOfArray = 6;
         int[][] arrayInitial = new int[sizeOfArray][sizeOfArray];
         int[][] arrayConverted = new int[sizeOfArray][sizeOfArray];

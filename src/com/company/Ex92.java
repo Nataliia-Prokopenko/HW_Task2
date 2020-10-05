@@ -5,7 +5,7 @@ public class Ex92 {
     public static void main(String[] args) {
 
         System.out.println("n-размерность матрицы");
-        //int n = new Scanner(System.in).nextInt();
+        //int sizeOfArray = new Scanner(System.in).nextInt();
         int sizeOfArray = 5;
         int step = 3;
         int[][] arrayInitial = new int[sizeOfArray][sizeOfArray];

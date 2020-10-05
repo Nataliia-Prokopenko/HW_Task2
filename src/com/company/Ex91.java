@@ -5,6 +5,7 @@ public class Ex91 {
     public static void main(String[] args) {
 
         System.out.println("n-размерность матрицы");
+        //int sizeOfArray = new Scanner(System.in).nextInt();
         int sizeOfArray = 5;
         int[][] array = new int[sizeOfArray][sizeOfArray];
 
