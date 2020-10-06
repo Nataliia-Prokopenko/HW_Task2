@@ -36,46 +36,33 @@ public class Ex97 {
         boolean[] arrayLine = new boolean[sizeOfArray];
         boolean[] arrayColumn = new boolean[sizeOfArray];
         for (int i = 0; i < sizeOfArray; i++) {
-            int count = 0;
-            if (arrayInitial[i][0] == 0) {
-                for (int j = 0; j < sizeOfArray; j++) {
-                    if (arrayInitial[i][j] == 0) {
-                        count++;
-                    }
+            for (int j = 0; j < sizeOfArray; j++) {
+                if (arrayInitial[i][j] != 0)
+                {
+                    arrayLine[i] = true;
+                    arrayColumn[j] = true;
                 }
-                arrayLine[i] = count != sizeOfArray;
-            } else arrayLine[i] = true;
+            }
         }
-        //поиск нулевого столбца
-        for (int j = 0; j < sizeOfArray; j++) {
-            int count = 0;
-            if (arrayInitial[0][j] == 0) {
-                for (int i = 0; i < sizeOfArray; i++) {
-                    if (arrayInitial[i][j] == 0) {
-                        count++;
-                    }
-                }
-                arrayColumn[j] = count != sizeOfArray;
-            } else arrayColumn[j] = true;
-        }
-        int[] zeroLineIndex = new int[1];
-        int[] zeroColumnIndex = new int[1];
+        int zeroLineIndex = 0;
+        int zeroColumnIndex = 0;
         for (int i = 0; i < sizeOfArray; i++) {
             if (!arrayLine[i]) {
-                zeroLineIndex[0] = i;
+                zeroLineIndex = i;
             }
             if (!arrayColumn[i]) {
-                zeroColumnIndex[0] = i;
+                zeroColumnIndex = i;
             }
         }
         // новая матрица
-        int[][] arrayWithoutZeroLine = new int[sizeOfArray - 1][sizeOfArray];
+        int[][] arrayWithoutZeroLine = new int[sizeOfArray][sizeOfArray];
         for (int i = 0; i < sizeOfArray - 1; i++) {
+
             for (int j = 0; j < sizeOfArray; j++) {
-                if (i >= zeroLineIndex[0]) {
+                if (i >= zeroLineIndex) {
                     arrayWithoutZeroLine[i][j] = arrayInitial[i + 1][j];
                 }
-                if (i < zeroLineIndex[0]) {
+                if (i < zeroLineIndex) {
                     arrayWithoutZeroLine[i][j] = arrayInitial[i][j];
                 }
             }
@@ -84,10 +71,10 @@ public class Ex97 {
         int[][] arrayWithoutZeroLineAndColumn = new int[sizeOfArray - 1][sizeOfArray];
         for (int i = 0; i < sizeOfArray - 1; i++) {
             for (int j = 0; j < sizeOfArray - 1; j++) {
-                if (j >= zeroColumnIndex[0]) {
+                if (j >= zeroColumnIndex) {
                     arrayWithoutZeroLineAndColumn[i][j] = arrayWithoutZeroLine[i][j + 1];
                 }
-                if (j < zeroColumnIndex[0]) {
+                if (j < zeroColumnIndex) {
                     arrayWithoutZeroLineAndColumn[i][j] = arrayWithoutZeroLine[i][j];
                 }
                 System.out.print(arrayWithoutZeroLineAndColumn[i][j] + " ");
